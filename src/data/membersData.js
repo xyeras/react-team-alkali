@@ -1,6 +1,6 @@
 export const membersData = [
     {
-    id:1,
+    id: 1,
     firstName: 'Nakia',
     lastName: 'Callaway',
     email: 'nik.callaway@outlook.com',
@@ -11,8 +11,8 @@ export const membersData = [
     languages: ['html', 'css', 'javascript', 'react']
     },
     {
-    id:2,
-    firstNAme: 'Pardeep',
+    id: 2,
+    firstName: 'Pardeep',
     lastName: 'Sangrhera',
     email: 'pradeepsanghera@gmail.com',
     linkedIn: 'http://linkedin.com/in/pardeep-sanghera-993b8a209',
@@ -22,7 +22,7 @@ export const membersData = [
     languages: ['html', 'css', 'javascript', 'react']
 },
 {
-    id:3,
+    id: 3,
     firstName: 'Alex',
     lastName: 'Gutierrez',
     email: 'agutierrez@bitwiseindustries.com',
@@ -33,7 +33,7 @@ export const membersData = [
     languages: ['html','css', 'javascript']
 },
 {
-    id:4,
+    id: 4,
     firstName: 'Merhawit',
     lastName:'Gubsa',
     email:'merhawitgubsa@gmail.com',
@@ -44,7 +44,7 @@ export const membersData = [
     languages:['html','css','react','javascript','java']
    },
    {
-    id:5,  
+    id: 5,  
     firstName: 'Elizabeth',
     lastName: 'Gaw',
     email: 'hello.xyeras@gmail.com',
@@ -53,70 +53,71 @@ export const membersData = [
     bio: 'lorem ipsum',
     profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQF0ROaUm_EXWw/profile-displayphoto-shrink_400_400/0/1611397157383?e=1622678400&v=beta&t=ajryz6YmZznohK-PD6Ltq63ExXHWUwm7wY54oqyO2BA',
     languages: ['html','css', 'javascript', 'react', 'python', 'haskell', 'oz', 'c++']
-    },
-    {
-        id:6,
-        firstName: 'Brittney',
-        lastName:'Cavazos',
-        email:'bcavazos@alphaworks.tech',
-        linkedIn:'https://www.linkedin.com/in/brittney-cavazos-83b056a9/',
-        github:'https://github.com/b-cavazos',
-        bio:'lorem ipsum',
-        profile_img:'https://media-exp1.licdn.com/dms/image/C5603AQHRFP4gIJp58g/profile-displayphoto-shrink_800_800/0/1578492310711?e=1622678400&v=beta&t=0HRaphHlpZn0giNFr799ZJyqimnglvrWnmKaKM-E9aM',
-        languages:['html','css','javascript', 'react']
-      },
-      {
-        id:7,
-        firstName: 'Ludwin',
-        lastName: 'Granados',
-        email: 'ludwingranados@gmail.com',
-        linkedIn: 'linkedin.com/in/ludwin-granados-358535195',
-        github: 'https://github.com/ludgranados',
-        bio: 'Love fishing, working on a aquaterrarium tank, building things, and reading. "walks on the beach jk.."',
-        profile_img: 'https://i.ibb.co/vQM2k7C/Hero-image.jpg',
-        languages: ['html', 'css', 'javascript', 'react']
-      },
-      {
-          id:8,
-        firstName: 'Anna',
-        lastName: 'Jiminez',
-        email: 'annamariej1015@gmail.com',
-        linkedIn: 'https://www.linkedin.com/in/annamarie-jimenez-231b79182/',
-        github: 'https://github.com/annamariej1015',
-        bio: 'lorem ipsum',
-        profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQEH3UH2jdXzdQ/profile-displayphoto-shrink_400_400/0/1611110839376?e=1622678400&v=beta&t=zOKhMYmgPrDbPa4bZOIrHyp2S4Y-1uRTIgFwNmA1tgs',
-        languages: ['html', 'css', 'javascript', 'react', 'react native', 'nodeJS', 'mongoDB', 'express']
-    },
-    {
-        firstName: 'Harrison',
-        lastName: 'Stamps',
-        email: 'hstamps4@gmail.com',
-        linkedIn: 'https://www.linkedin.com/in/harrison-stamps-201184142/',
-        github: 'https://github.com/hstamps-stack',
-        bio: 'lorem ipsum',
-        profile_img: 'https://ibb.co/cwz8zv9',
-        languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express']
-     },
-    {
-        id:9,
-        firstName: 'Jeffrey',
-        lastName: 'Rios',
-        email: 'jeffriosjr@gmail.com',
-        linkedIn: 'https://www.linkedin.com/in/jeffrey-rios-a113a949/',
-        github: 'https://github.com/jeffreyriosjr',
-        bio: 'lorem ipsum',
-        profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQE-EURX3_t5DA/profile-displayphoto-shrink_200_200/0/1616453773735?e=1622678400&v=beta&t=BA_m1wLet2-8HhMFEkl9v5I5I1rCpMAP1G2_H3CpMgY',
-        languages: ['html','css', 'javascript', 'react']
-    },
-    {
-        id:10,
-        firstName: 'Pravilika',
-        lastName: ' Ammineni',
-        email: 'pravallikaammineni@gmail.com',
-        linkedIn: 'https://www.linkedin.com/in/pravalika-a-12aa9b18a/',
-        github: 'https://github.com/pravallika89',
-        bio: 'Lorem ipsum',
-        profile_img: 'https://ca.slack-edge.com/T03A6AQRX-U01MRFW8PGA-e931aafaaa4d-512',
-        languages: ['html', 'css', 'javascript', 'react']
-    },        
+  },
+  {
+    id: 6,
+    firstName: 'Brittney',
+    lastName:'Cavazos',
+    email:'bcavazos@alphaworks.tech',
+    linkedIn:'https://www.linkedin.com/in/brittney-cavazos-83b056a9/',
+    github:'https://github.com/b-cavazos',
+    bio:'lorem ipsum',
+    profile_img:'https://media-exp1.licdn.com/dms/image/C5603AQHRFP4gIJp58g/profile-displayphoto-shrink_800_800/0/1578492310711?e=1622678400&v=beta&t=0HRaphHlpZn0giNFr799ZJyqimnglvrWnmKaKM-E9aM',
+    languages:['html','css','javascript', 'react']
+  },
+  {
+    id: 7,
+    firstName: 'Ludwin',
+    lastName: 'Granados',
+    email: 'ludwingranados@gmail.com',
+    linkedIn: 'linkedin.com/in/ludwin-granados-358535195',
+    github: 'https://github.com/ludgranados',
+    bio: 'Love fishing, working on a aquaterrarium tank, building things, and reading. "walks on the beach jk.."',
+    profile_img: 'https://i.ibb.co/vQM2k7C/Hero-image.jpg',
+    languages: ['html', 'css', 'javascript', 'react']
+  },
+  {
+    id: 8,
+    firstName: 'Anna',
+    lastName: 'Jiminez',
+    email: 'annamariej1015@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/annamarie-jimenez-231b79182/',
+    github: 'https://github.com/annamariej1015',
+    bio: 'lorem ipsum',
+    profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQEH3UH2jdXzdQ/profile-displayphoto-shrink_400_400/0/1611110839376?e=1622678400&v=beta&t=zOKhMYmgPrDbPa4bZOIrHyp2S4Y-1uRTIgFwNmA1tgs',
+    languages: ['html', 'css', 'javascript', 'react', 'react native', 'nodeJS', 'mongoDB', 'express']
+  },
+  {
+    id: 9,
+    firstName: 'Harrison',
+    lastName: 'Stamps',
+    email: 'hstamps4@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/harrison-stamps-201184142/',
+    github: 'https://github.com/hstamps-stack',
+    bio: 'lorem ipsum',
+    profile_img: 'https://ibb.co/cwz8zv9',
+    languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express']
+   },
+  {
+    id: 10,
+    firstName: 'Jeffrey',
+    lastName: 'Rios',
+    email: 'jeffriosjr@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/jeffrey-rios-a113a949/',
+    github: 'https://github.com/jeffreyriosjr',
+    bio: 'lorem ipsum',
+    profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQE-EURX3_t5DA/profile-displayphoto-shrink_200_200/0/1616453773735?e=1622678400&v=beta&t=BA_m1wLet2-8HhMFEkl9v5I5I1rCpMAP1G2_H3CpMgY',
+    languages: ['html','css', 'javascript', 'react']
+  },
+  {
+    id: 11,
+    firstName: 'Pravilika',
+    lastName: ' Ammineni',
+    email: 'pravallikaammineni@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/pravalika-a-12aa9b18a/',
+    github: 'https://github.com/pravallika89',
+    bio: 'Lorem ipsum',
+    profile_img: 'https://ca.slack-edge.com/T03A6AQRX-U01MRFW8PGA-e931aafaaa4d-512',
+    languages: ['html', 'css', 'javascript', 'react']
+  }        
 ];
