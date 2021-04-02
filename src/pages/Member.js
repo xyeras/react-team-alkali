@@ -23,6 +23,7 @@ let languages = [
 const Member = () => {
     let { memberId } = useParams();
     let [member, setMember] = useState({
+
         firstName: '',
         lastName: '',
         email: '',
@@ -48,9 +49,18 @@ const Member = () => {
           setAlert(false);
         },);
       }; 
+   
+
+    useEffect(() => {
+        let foundMember = membersData.find(m => m.id === +memberId);
+        setMember(foundMember);
+    }, [member, memberId]);
+
+    const updatedFeatured = memId => {
+        let foundMember = membersData.find(m => m.id === +memId);
+        foundMember.featured = !foundMember.featured;
+      }; 
     
-
-
     return (
         <div id='member'>
             <div className='row mt-4'>
@@ -68,6 +78,7 @@ const Member = () => {
                                             <a 
                                             href='javascript:void(0)'
                                             onClick={() => updatedFeatured(member.firstName.lastName)}>
+
                                                 {members.featured}
                                                 </a>
                                         </span>
@@ -79,12 +90,14 @@ const Member = () => {
                                     </h2>
                                     </div>
                                     <div className='th-card-details'>
+
                                         <div className='detail'>
                                             <h4 className='text-primary'>About {member.firstName}</h4>
 
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex veniam repellendus voluptatum a eveniet quo perspiciatis, vero provident quisquam temporibus.</p>
 
                                         </div>
+
                                         <div className='detail'>
                                             <h4 className='text-danger'>Connect Here:</h4>
                                             <p className={`url(${member.email})`}>
@@ -98,10 +111,12 @@ const Member = () => {
                                            
                                         <div className='detail'>
                                             </div>
+
                                             <h4 className='text-primary'>Languages</h4>
                                             <p>
                                                 {member.languages.map((language, i) => {
                                                    return (
+
                                                    <span 
                                                    className='badge badge-success mx-1'
                                                    key={i}>
@@ -111,6 +126,7 @@ const Member = () => {
                                                 })}
                                                 </p>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +161,7 @@ const Member = () => {
               
             
        
-        
+     
     );
 };
 

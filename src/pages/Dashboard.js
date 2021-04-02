@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import MemberCard  from '../components/MemberCard';
+
 import { membersData } from '../data/membersData';
 import '../App.css';
 
@@ -26,6 +27,11 @@ const Dashboard = () => {
         },);
     };
 
+
+    const updatedFeatured = memberId => {
+        let foundMember = membersData.find(member => member.id ===+memberId);
+        foundMember.featured = !foundMember.featured;
+    };
 
     return (
         <div id='dashboard-page'>

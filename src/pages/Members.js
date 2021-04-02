@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import MemberCard from '../components/MemberCard';
+
 const Members = () => {
     const [members, setMembers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     useEffect(() => {
+
         const foundMembers = membersData.filter(md => {
             return (
                 md.firstName.toLowerCase().includes(searchTerm.toLowerCase()) +
                 md.lastName.toLowerCase().includes(searchTerm.toLowerCase())
             );
         });
+
         searchTerm === '' ? setMembers(membersData) : setMembers(foundMembers);
     }, [searchTerm]);
     const handleChange = event => {
@@ -19,13 +22,16 @@ const Members = () => {
     }
     return (
         <div id="Members">
+
             <div className="row text-center mt-3">
                 <div className="col">
                     <h2>View our Team!</h2>
                 </div>
             </div>
+
             <div className="row">
                 <div className="col-sm-12">
+
                     <div className="form=group">
                         <input
                             type="text"
@@ -38,6 +44,7 @@ const Members = () => {
                     </div>
                 </div>
             </div>
+
             <div className="row">
                     {members.map(member => {
                         return (
@@ -47,8 +54,10 @@ const Members = () => {
                         )
                     })}
             </div>
+
         </div>
     );
+
     // return (
     //     <div>
     //         <h2>This is my Members Page!</h2>

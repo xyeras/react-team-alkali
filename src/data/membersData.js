@@ -1,4 +1,5 @@
 export const membersData = [
+
   {
   id: 1,
   firstName: 'Nakia',
@@ -131,4 +132,5 @@ export const membersData = [
   profile_img: 'https://ca.slack-edge.com/T03A6AQRX-U01MRFW8PGA-e931aafaaa4d-512',
   languages: ['html', 'css', 'javascript', 'react']
 }        
+
 ];
