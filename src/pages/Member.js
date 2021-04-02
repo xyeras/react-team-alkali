@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { membersData } from '../data/membersData';
 import { useParams } from 'react-router-dom';
 import { Route, Link,} from 'react-router-dom';
-import MemberCard from '../components/MemberCard';
+import  MemberCard  from '../components/MemberCard';
 
 let languages = [
     'html',
@@ -22,7 +22,7 @@ let languages = [
 
 const Member = () => {
     let { memberId } = useParams();
-    const [member, setMember] = useState({
+    let [member, setMember] = useState({
         firstName: '',
         lastName: '',
         email: '',
@@ -32,7 +32,7 @@ const Member = () => {
         profile_img: '',
         languages: [],
     });
-    const [members, setMembers] = useState([]);
+    const [members, setMembers] = useState(membersData);
     const [alert, setAlert] = useState(false);
 
     useEffect(() => {
@@ -86,8 +86,16 @@ const Member = () => {
 
                                         </div>
                                         <div className='detail'>
-                                            <h4 className='text-primary'>Connect with  {member.firstName}</h4>
-                                            <p></p>
+                                            <h4 className='text-danger'>Connect Here:</h4>
+                                            <p className={`url(${member.email})`}>
+                                                <a herf ='javascript:void(0)' className='card-link' onClick ={() => updatedFeatured(member.id)}><span className='badge badge-info'>
+                                               <em><p>{member.email}</p>
+                                               <p> {member.github} </p>
+                                                {member.linkedIn}</em>
+                                                </span>
+                                                </a>
+                                            </p>
+                                           
                                         <div className='detail'>
                                             </div>
                                             <h4 className='text-primary'>Languages</h4>
@@ -113,9 +121,17 @@ const Member = () => {
                     Check Out All Our Members!
                     </h4>
                     </div>
-                    <div className='card'>
-                    <div className="th-card-bg-img mt-3" style={{'backgroundImage': `url(${member.profile_img})`}}>
+                    <div className="row">
+                    {membersData.map(member => {
+                        return (
+                        <div className="col-sm-12 col-md-3" key={member.id}>
+                            <MemberCard member={member} />
+                        </div>
+                        )
+                    })}
+            </div>
                     <div className="card-header text-center">
+                        
                                         <Link to={`/members`}>View Details
                                         </Link>
                                         <a href='javascript:void(0)' className='card-link' onClick={() => updatedFeatured(member.id)}>
@@ -123,13 +139,12 @@ const Member = () => {
                                         </a>
                                         </div>
                                             </div>
-
+                                            <div>harrison is awesome</div>
                                 </div>
                 </div>
-                </div>
-            </div>
+              
             
-        
+       
         
     );
 };
