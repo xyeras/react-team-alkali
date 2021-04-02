@@ -1,5 +1,5 @@
-// import { useEffect, useState } from 'react';
-// import { memberData } from '../data/members';
+import { useEffect, useState } from 'react';
+import { memberData } from '../data/membersData';
 
 const AddMember = () => {
 
