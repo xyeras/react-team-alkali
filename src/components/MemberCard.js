@@ -3,11 +3,11 @@ const MemberCard = ( {member} ) => {
     return (
         <div>
         <div className="card mb-3 text-center">
-            <div className="card-header text-center">{member.bio}</div>
-            <div className="th-card-bg-img mt-3" style={{'backgroundImage': `url(${member.profile_img})`}}></div>
+        <div className="th-card-bg-img mt-3" style={{'backgroundImage': `url(${member.profile_img})`}}></div>
+            <div className="card-header text-center">{member.firstName} {member.lastName}</div>
             <div className="card-body">
                 <h4 className='card-title'>
-                    {member.firstName} {member.lastName}
+                {member.bio}
                 </h4>
                 <h6 className="text-secondary">{member.alter_ego}</h6>
                 <div className="my-2">

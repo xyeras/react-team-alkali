@@ -39,6 +39,13 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  color: #282c34;
+}
+.member-list{
+  color: #282c34;
+  background-color: #61dafb;
+}
 .th-card-bg-img {
   height: 150px;
   background-size: contain;
@@ -65,3 +72,9 @@
   color: #282c34;
 }
 
+.card-title{
+  font-size: 14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  color: tomato;
+}

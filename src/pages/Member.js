@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { membersData } from '../data/membersData';
 import { useParams } from 'react-router-dom';
-import Members from './Members';
+import { Route, Link,} from 'react-router-dom';
+import MemberCard from '../components/MemberCard';
 
-const languages = [
+let languages = [
     'html',
     'css',
     'react',
@@ -67,14 +68,14 @@ const Member = () => {
                                             <a 
                                             href='javascript:void(0)'
                                             onClick={() => updatedFeatured(member.firstName.lastName)}>
-                                                {member.featured}
+                                                {members.featured}
                                                 </a>
                                         </span>
-                                        <span>{member.firstName.lastName}</span>
+                                        
                                     </div>
                                     <div className='th-card-name my-3'>
                                     <h2>
-                                    <span>{member.firstName} </span>
+                                    <span>{member.firstName} {member.lastName} </span>
                                     </h2>
                                     </div>
                                     <div className='th-card-details'>
@@ -85,6 +86,10 @@ const Member = () => {
 
                                         </div>
                                         <div className='detail'>
+                                            <h4 className='text-primary'>Connect with  {member.firstName}</h4>
+                                            <p></p>
+                                        <div className='detail'>
+                                            </div>
                                             <h4 className='text-primary'>Languages</h4>
                                             <p>
                                                 {member.languages.map((language, i) => {
@@ -96,26 +101,36 @@ const Member = () => {
                                                    </span>
                                                    );
                                                 })}
-                                            </p>
+                                                </p>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='row'>
-                                         {members.map(member => {
-                                         return (
-                                                <div className='col-sm-12 col-md-3' key={member.id}>
-                                                <Member member={member} updatedFeatured={updatedFeatured} />
-                                                </div>
-                                            );
-                                           })}
-                                         </div>
+                    <div className="card-body mt-5">
+                    <h4 className='col-sm-12 text-center mt-5'>
+                    Check Out All Our Members!
+                    </h4>
+                    </div>
+                    <div className='card'>
+                    <div className="th-card-bg-img mt-3" style={{'backgroundImage': `url(${member.profile_img})`}}>
+                    <div className="card-header text-center">
+                                        <Link to={`/members`}>View Details
+                                        </Link>
+                                        <a href='javascript:void(0)' className='card-link' onClick={() => updatedFeatured(member.id)}>
+                                            
+                                        </a>
+                                        </div>
+                                            </div>
+
+                                </div>
+                </div>
                 </div>
             </div>
-        </div>
+            
+        
+        
     );
 };
 
