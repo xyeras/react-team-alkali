@@ -2,14 +2,11 @@ import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import MemberCard from '../components/MemberCard';
 
-const MemberList = () => {
+const MemberList = ( {members} ) => {
     
-    const [members, setMembers] = useState([membersData]);
 
     return (
         <div id="MemberList">
-
-            FIXME
 
             <div className="row">
                     {members.map(member => {

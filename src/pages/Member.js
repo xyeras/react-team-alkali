@@ -5,7 +5,7 @@ import MemberList from '../components/MemberList'
 
 const Member = () => {
     let { memberId } = useParams();
-    const [members, setMembers] = useState([]);
+    const [members, setMembers] = useState(membersData);
     const [member, setMember] = useState({
         firstName: '',
         lastName: '',
