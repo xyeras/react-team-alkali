@@ -20,6 +20,10 @@ const Members = () => {
 
     }, [searchTerm]);
 
+    useEffect(() => {
+        
+    }, [members]);
+
     const handleChange = event => {
 
         console.log(event.target.value);
