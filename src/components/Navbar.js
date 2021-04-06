@@ -24,7 +24,10 @@ const Navbar = () => {
             <Link className='nav-link' to='/members'>
               Members
             </Link>
-            <Link className='nav-link' to='/add'>
+            {/* <Link className='nav-link' to='/add'>
+              Add Member
+            </Link> */}
+            <Link className='nav-link' to='/members/add'>
               Add Member
             </Link>
           </div>

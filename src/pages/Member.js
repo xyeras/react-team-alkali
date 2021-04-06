@@ -19,7 +19,9 @@ const Member = () => {
 
     useEffect(() => {
         let foundMember = membersData.find(m => m.id === +memberId);
-        setMember(foundMember);
+        if(foundMember){
+            setMember(foundMember);
+        }
     }, [member, memberId]);
 
     const updatedFeatured = memId => {

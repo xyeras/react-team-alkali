@@ -21,11 +21,6 @@ const MemberList = ( {members} ) => {
         </div>
     );
 
-    // return (
-    //     <div>
-    //         <h2>This is my Members Page!</h2>
-    //     </div>
-    // );
 }
 
 export default MemberList;
