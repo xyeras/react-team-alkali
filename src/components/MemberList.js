@@ -2,14 +2,11 @@ import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import MemberCard from '../components/MemberCard';
 
-const MemberList = () => {
+const MemberList = ( {members} ) => {
     
-    const [members, setMembers] = useState([membersData]);
 
     return (
         <div id="MemberList">
-
-            FIXME
 
             <div className="row">
                     {members.map(member => {
@@ -24,11 +21,6 @@ const MemberList = () => {
         </div>
     );
 
-    // return (
-    //     <div>
-    //         <h2>This is my Members Page!</h2>
-    //     </div>
-    // );
 }
 
 export default MemberList;

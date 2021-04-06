@@ -5,7 +5,7 @@ import MemberList from '../components/MemberList'
 
 const Member = () => {
     let { memberId } = useParams();
-    const [members, setMembers] = useState([]);
+    const [members, setMembers] = useState(membersData);
     const [member, setMember] = useState({
         firstName: '',
         lastName: '',
@@ -19,7 +19,9 @@ const Member = () => {
 
     useEffect(() => {
         let foundMember = membersData.find(m => m.id === +memberId);
-        setMember(foundMember);
+        if(foundMember){
+            setMember(foundMember);
+        }
     }, [member, memberId]);
 
     const updatedFeatured = memId => {
