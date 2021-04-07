@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+
 const MemberCard = ( {member} ) => {
     return (
         
@@ -20,6 +21,7 @@ const MemberCard = ( {member} ) => {
                 </h6>
                 <div className='my-2'>
                     <strong> Languages: </strong>
+
                     {member.languages?.map((language, i) => {
                         return <small key={i}> {language}{i === member.languages.length - 1 ? '' : ', ' } </small>
                     })}
@@ -32,6 +34,7 @@ const MemberCard = ( {member} ) => {
             </div>
         
     
+
     );
 }
 export default MemberCard;

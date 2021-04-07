@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import MemberCard from '../components/MemberCard';
+
 import Members  from '../pages/Members'; 
 import { Link } from 'react-router-dom';
 
@@ -30,4 +31,5 @@ const MemberList = () => {
     //         <h2>This is my Members Page!</h2>
     //     </div>    // );
 }
+
 export default MemberList;

@@ -1,6 +1,8 @@
+
 import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import BgVid4 from '../video/bgvid4.mp4'
+
 const AddMember = () => {
     const [members, setMembers] = useState(membersData);
     const [member, setMember] = useState({
@@ -19,6 +21,7 @@ const AddMember = () => {
         console.log(members);
         console.log(membersData);
     })
+
 
     const saveMember = () => {
         member.id = Date.now();
@@ -49,6 +52,7 @@ const AddMember = () => {
                 <source src={BgVid4} type='video/mp4' />
             </video>
         <div className="my-5">
+
             <form action='submit' id='member-form' onSubmit={handleSubmit}>
                 <div className="form-row">
                     <div className="form-group col-md-6">
@@ -76,6 +80,7 @@ const AddMember = () => {
                         required/>
                     </div>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input
@@ -89,6 +94,7 @@ const AddMember = () => {
                         placeholder=""
                         required/>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="linkedIn">LinkedIn</label>
                     <input
@@ -102,6 +108,7 @@ const AddMember = () => {
                         placeholder=""
                         required/>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="github">GitHub</label>
                     <input
@@ -114,6 +121,7 @@ const AddMember = () => {
                         }}
                         required/>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="bio">Bio</label>
                     <textarea
@@ -126,6 +134,7 @@ const AddMember = () => {
                         rows="3"
                         placeholder=""></textarea>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="pfp">Profile image</label>
                     <input
@@ -138,6 +147,7 @@ const AddMember = () => {
                         }}
                         required/>
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="languages">Coding languages</label>
                     <input
@@ -151,10 +161,11 @@ const AddMember = () => {
                         }}
                         placeholder="html,css,javascript,react"
                         required/>
-                </div>
+
             <button type="submit" className="btn btn-primary">Save</button>
             </form>
         </div>
+
         </div>
     );
 }

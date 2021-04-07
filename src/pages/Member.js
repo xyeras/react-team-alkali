@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { membersData } from '../data/membersData';
 import { useParams } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 import  MemberCard  from '../components/MemberCard';
 import '../App.css';
@@ -24,6 +25,7 @@ let languages = [
 const Member = () => {
     let { memberId } = useParams();
     let [member, setMember] = useState({
+
         firstName: '',
         lastName: '',
         email: '',
@@ -33,6 +35,7 @@ const Member = () => {
         profile_img: '',
         languages: [],
     });
+
     const [members, setMembers] = useState(membersData);
     const [alert, setAlert] = useState(false);
 
@@ -54,7 +57,20 @@ const Member = () => {
     
 
 
+    useEffect(() => {
+        let foundMember = membersData.find(m => m.id === +memberId);
+        if(foundMember){
+            setMember(foundMember);
+        }
+    }, [member, memberId]);
+
+    const updatedFeatured = memId => {
+        let foundMember = membersData.find(m => m.id === +memId);
+        foundMember.featured = !foundMember.featured;
+      }; 
+    
     return (
+
         <div className='container d-flex'>
             <div className='th-card'
              style={{ backgroundImage: `url(${member.profile_img})`}}></div>
@@ -136,6 +152,7 @@ const Member = () => {
             </div>
             </div>
             
+
     );
 };
 
