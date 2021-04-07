@@ -10,28 +10,11 @@ import BgVid from '../video/bgvid.mp4';
 const Dashboard = () => {
     const [members, setMembers] = useState ([]);
 
-    const [alert, setAlert] = useState(false);
-
-
     useEffect(() => {
         let featured = membersData.filter(member => member.featured);
         setMembers(featured);
 
     }, [alert]);
-
-    const updatedFeatured = memberId => {
-        let foundMember = membersData.find(member => member.id ===+memberId);
-        foundMember.featured = !foundMember.featured;
-        showAlert();
-    };
-
-    const showAlert = () => {
-        setAlert(true);
-        setTimeout(() => {
-            setAlert(false);
-        },);
-    };
-
 
     const updatedFeatured = memberId => {
         let foundMember = membersData.find(member => member.id ===+memberId);

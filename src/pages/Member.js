@@ -6,22 +6,6 @@ import { Link } from 'react-router-dom';
 import  MemberCard  from '../components/MemberCard';
 import '../App.css';
 
-let languages = [
-    'html',
-    'css',
-    'react',
-    'javascript',
-    'python',
-    'haskell', 
-    'oz', 
-    'c++',
-    'react native', 
-    'nodeJS', 
-    'mongoDB', 
-    'express',
-];
-
-
 const Member = () => {
     let { memberId } = useParams();
     let [member, setMember] = useState({
@@ -37,25 +21,6 @@ const Member = () => {
     });
 
     const [members, setMembers] = useState(membersData);
-    const [alert, setAlert] = useState(false);
-
-    useEffect(() => {
-        let foundMember = membersData.find(m => m.id === +memberId);
-        if(foundMember){
-        setMember(foundMember);
-    }
-    }, [member, memberId]);
-
-    const updatedFeatured = memId => {
-        let foundMember = membersData.find(m => m.id === +memId);
-        foundMember.featured = !foundMember.featured;
-        setAlert(true);
-        setTimeout(() => {
-          setAlert(false);
-        },);
-      }; 
-    
-
 
     useEffect(() => {
         let foundMember = membersData.find(m => m.id === +memberId);
@@ -67,7 +32,7 @@ const Member = () => {
     const updatedFeatured = memId => {
         let foundMember = membersData.find(m => m.id === +memId);
         foundMember.featured = !foundMember.featured;
-      }; 
+    }; 
     
     return (
 
@@ -123,7 +88,7 @@ const Member = () => {
                                                 <div className="container text-center mt-5">
                                                 <Link to={`/members`}>View Details
                                                 </Link>
-                                                <a href='javascript:void(0)' className='card-link' onClick={() => updatedFeatured(member.id)}>
+                                                <a href='javascript:void(0)' className='card-link'>
                             
                                                 </a>
                                             </div>
@@ -133,24 +98,24 @@ const Member = () => {
                             </div>
                       
                     
-                    <div className="col text-center">
+                <div className="col text-center">
                     <p>
                     Check Out All Our Members!
                     </p>
                     
                     <div className="col text-center">
-                    {membersData.map(member => {
-                        return (
-                        <div className="cards1" key={member.id}>
-                            <MemberCard member={member.id} />
-                        </div>
-                        
-                        )
-                    })}
+                        {membersData.map(member => {
+                            return (
+                            <div className="cards1" key={member.id}>
+                                <MemberCard member={member.id} updatedFeatured={updatedFeatured}/>
+                            </div>
+                            
+                            )
+                        })}
             
-            </div>
-            </div>
-            </div>
+                    </div>
+                </div>
+        </div>
             
 
     );

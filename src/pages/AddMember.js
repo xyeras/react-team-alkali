@@ -16,20 +16,13 @@ const AddMember = () => {
         profile_img: '',
         languages: [],
     });
-    
-    useEffect(() => {
-        console.log(members);
-        console.log(membersData);
-    })
-
 
     const saveMember = () => {
         member.id = Date.now();
         membersData.push(member);
-        // setMembers([...members, member]);
         setMembers(membersData);
-        console.log('Submit works!');
     }
+    
     const handleSubmit = event => {
         event.preventDefault();
         saveMember();
@@ -161,6 +154,7 @@ const AddMember = () => {
                         }}
                         placeholder="html,css,javascript,react"
                         required/>
+                    </div>
 
             <button type="submit" className="btn btn-primary">Save</button>
             </form>
