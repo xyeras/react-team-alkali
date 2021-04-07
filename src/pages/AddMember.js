@@ -18,14 +18,16 @@ const AddMember = () => {
 
     useEffect(() => {
         console.log(members);
+        console.log(membersData);
     })
 
     const saveMember = () => {
 
         member.id = Date.now();
-        setMembers([...members, member]);
+        membersData.push(member);
+        // setMembers([...members, member]);
+        setMembers(membersData);
         console.log('Submit works!');
-        console.log('Tacos!');
 
     }
 
