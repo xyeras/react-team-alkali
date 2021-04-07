@@ -1,3 +1,5 @@
+import '../App.css'
+
 export const membersData = [
   {
   id: 1,
@@ -71,20 +73,9 @@ export const membersData = [
   profile_img:'https://media-exp1.licdn.com/dms/image/C5603AQHRFP4gIJp58g/profile-displayphoto-shrink_800_800/0/1578492310711?e=1622678400&v=beta&t=0HRaphHlpZn0giNFr799ZJyqimnglvrWnmKaKM-E9aM',
   languages:['html','css','javascript', 'react']
 },
+
 {
   id: 7,
-  firstName: 'Ludwin',
-  lastName: 'Granados',
-  featured: false,
-  email: 'ludwingranados@gmail.com',
-  linkedIn: 'linkedin.com/in/ludwin-granados-358535195',
-  github: 'https://github.com/ludgranados',
-  bio: 'Love fishing, working on a aquaterrarium tank, building things, and reading. "walks on the beach jk.."',
-  profile_img: 'https://i.ibb.co/vQM2k7C/Hero-image.jpg',
-  languages: ['html', 'css', 'javascript', 'react']
-},
-{
-  id: 8,
   firstName: 'Anna',
   lastName: 'Jiminez',
   featured: false,
@@ -94,6 +85,18 @@ export const membersData = [
   bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic laboriosam sapiente alias, repellendus inventore omnis totam exercitationem quibusdam accusamus consequuntur. Id laboriosam aperiam accusantium in!',
   profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQEH3UH2jdXzdQ/profile-displayphoto-shrink_400_400/0/1611110839376?e=1622678400&v=beta&t=zOKhMYmgPrDbPa4bZOIrHyp2S4Y-1uRTIgFwNmA1tgs',
   languages: ['html', 'css', 'javascript', 'react', 'react native', 'nodeJS', 'mongoDB', 'express']
+},
+{
+  id: 8,
+  firstName: 'Ludwin',
+  lastName: 'Granados',
+  featured: false,
+  email: 'ludwingranados@gmail.com',
+  linkedIn: 'linkedin.com/in/ludwin-granados-358535195',
+  github: 'https://github.com/ludgranados',
+  bio: 'Love fishing, working on a aquaterrarium tank, building things, and reading. "walks on the beach jk.."',
+  profile_img: 'https://i.ibb.co/vQM2k7C/Hero-image.jpg',
+  languages: ['html', 'css', 'javascript', 'react']
 },
 {
   id: 9,

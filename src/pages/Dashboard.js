@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import MemberCard  from '../components/MemberCard';
 import { membersData } from '../data/membersData';
 import '../App.css';
+import BgVid from '../video/bgvid.mp4';
 
 
 const Dashboard = () => {
@@ -28,25 +29,38 @@ const Dashboard = () => {
 
 
     return (
-        <div id='dashboard-page'>
-            <div className='row text-center mt-3'>
-                <div className='col'>
-                    <h2>Team Alkali</h2>
-            <h4 className='text-secondary'>Who We Are!</h4>
-            
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit eius iusto accusamus culpa laudantium, officiis harum voluptatibus, ipsa et repellendus qui, iure minus quisquam odio maiores aliquid facilis repudiandae! Consequuntur ipsum eaque culpa porro sunt, cum distinctio est atque omnis animi eos quisquam deleniti voluptate rerum velit inventore rem facere!</p>
-
-            </div>
+        <div className='body mt-5 text-center'>
+            <video autoPlay loop muted
+                style={{
+                    position: 'fixed',
+                    width: '100%',
+                    left: '50%',
+                    top: '50%',
+                    height: '100%',
+                    overflow:'hidden',
+                    objectFit: 'cover',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: '-1'
+                }}
+                >
+                <source src={BgVid} type='video/mp4' />
+            </video>
+            <div className='header2 justify-content-center'></div>
+            <p>About our Team:</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus officiis ad consequuntur natus soluta voluptates consectetur fuga inventore voluptatibus assumenda.</p>
+            <div className='row text-center'>
         </div>
-        
-        <div className='row'>
+        <div className='container text-center'>        
+        <div className='card-header text-center'>
+        <h1 className='col-md-6 subhead'data-text="This Week's Featured Member:"></h1>
             {members.map((member, index) => {
                 return (
-                    <div className='col' key={member.id}>
+                    <div className='row justify-content-center' key={member.id}>
                     <MemberCard member={member} updatedFeatured={updatedFeatured} />
-                    </div>
+                    </div>  
                 );
             })}
+            </div>
         </div>
         </div>
     );

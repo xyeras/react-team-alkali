@@ -10,7 +10,7 @@ const MemberList = () => {
     return (
         <div id="MemberList">
             <div className="col-sm-12 col-md-3">
-            <span key={members.MemberCard}>{members.id}</span>
+            {/* <span key={members.MemberCard}>{members.id}</span> */}
                     {members.map(member => {
                         return (
                         <div className="row member-list">
