@@ -1,45 +1,268 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info{
+  font-size: 12px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info2{
+  position: relative;
+  color: black;
+  font-size: 12px;
 }
-
-h2 {
-  color: #282c34;
-  font-size: 22px;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+p{
+  font-family: 'Orbitron';
+  color: rgb(35, 77, 114);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+
+.subhead{
+  
+  font-family: 'Orbitron';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 12px;
+  padding: 0 10px;
+  font-size: 3em;
   color: white;
+  text-shadow: 0 0 20px #ff005b;
+}
+.subhead:after 
+{
+  content: attr(data-text);
+  position: center;
+  top: 0;
+  left:0;
+  padding: 0 10px;
+  z-index: -1;
+  color: rgb(9, 11, 11);
+
+}
+.subhead:before 
+{
+  content: '';
+  position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #098340;
+  z-index: -2;
+  opacity: .5;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* header{
+  display:grid;
+  background-image: url('../src/assets/teamAlkali1.png');
+  background-size: cover;
+  justify-content: center;
+  width: 40%;
+  height: 160px;
+  background-position: center;
+} */
+.header2
+{
+  margin-left:29%;
+  background-position: center;
+  background-image: url('../src/assets/teamAlkali1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 400px;
+  height: 132px;
+
+
+}
+.header1{
+  display:grid;
+  margin: 2%;
+  position:sticky;
+  display: grid;
+  background-position:center;
+  background-image: url('../src/assets/teamAlkali1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  width: 40%;
+  height: 160px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2{
+  margin: 10;
+  padding: 5px;
+  justify-content: center;
+  align-items:flex-start;
+  font-size: 8px;
+  color: #e9ebf0;
+}
+
+.h7{
+  margin: 10;
+  padding: 5px;
+  justify-content: center;
+  align-items:flex-start;
+  font-size: 8px;
+  color: #e9ebf0;
+}
+h6{
+  font-family: 'Orbitron';
+  font-size: 10px;
+  justify-content: center;
+  color: #1f3367;
+}
+
+.navbar .nav {
+  justify-content: center;
+  background-color: rgba(44, 52, 48, 0.1);
+}
+.navbar .nav .navbar-expand  {
+  justify-content: center;
+  color: #7887a4;
+  font-size: 25px;
+}
+
+
+.card-header{
+  color: aliceblue;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.th-card-bg-img {
+  background: rgba(198, 185, 185, 0.1);
+
+  width: 100%;  
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position:top;
+}
+
+.container .card{
+  display: flex;
+  width: 270px;
+  height: 510px;
+  margin: 10px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  background: rgba(133, 124, 124, 0.1);
+  overflow: hidden;
+  justify-content: center;
+  color: aliceblue;
+  align-items: center;
+  border-top: 1 px solid rgba(255, 255, 255, 0.5);
+  border-left: 1 px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+
+ strong {
+   text-align: center;
+   margin: 6;
+  font-size: 13px;
+  position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  color: rgb(224, 63, 26);
+}
+.strong2 {
+      justify-content: center;
+      display: flex;
+    text-align: center;
+    margin: 16px;
+    /* padding: 22px;
+    font-size: 26px; */
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(224, 63, 26);
+}
+
+form{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #8e96a5;
+}
+.th-card{
+  width: 20px;
+  display: flex;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 50%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+}
+.th-card-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+  
+}
+
+
+.th-card-bg-img {
+  display: grid;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 50%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+span{
+  background-color: rgba(211, 190, 190, 0.5) ;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  color: rgb(31, 80, 109);
+}
+.bg2{ 
+  background: rgba(255, 255, 255, 0.1);
+  width: 210px;  
+  height: 210px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.card-body2{
+  /* display: flex;
+  width: 270px;
+  height: 510px; */
+  
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  background: rgba(133, 124, 124, 0.1);
+  /* overflow: hidden; */
+  justify-content: center;
+  color: aliceblue;
+  align-items: center;
+  border-top: 1 px solid rgba(255, 255, 255, 0.5);
+  border-left: 1 px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.subcomponent{
+  display: flex;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .th-card-bg-img {

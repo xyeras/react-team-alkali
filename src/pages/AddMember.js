@@ -1,8 +1,9 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
+import BgVid4 from '../video/bgvid4.mp4'
 
 const AddMember = () => {
-
     const [members, setMembers] = useState(membersData);
     const [member, setMember] = useState({
         firstName: '',
@@ -15,27 +16,41 @@ const AddMember = () => {
         profile_img: '',
         languages: [],
     });
+    
+    useEffect(() => {
+        console.log(members);
+        console.log(membersData);
+    })
+
 
     const saveMember = () => {
-
-        // debugger;
-
         member.id = Date.now();
-        setMembers([...members, member]);
+        membersData.push(member);
+        // setMembers([...members, member]);
+        setMembers(membersData);
         console.log('Submit works!');
-        console.log(members);
-        console.log('Tacos!');
-
     }
-
     const handleSubmit = event => {
-
         event.preventDefault();
         saveMember();
-    
     };
-
     return (
+        <div className='body mt-5'>
+            <video autoPlay loop muted
+                style={{
+                    position: 'fixed',
+                    width: '100%',
+                    left: '50%',
+                    top: '50%',
+                    minHeight: '100%',
+                    overflow:'hidden',
+                    objectFit: 'cover',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: '-1'
+                }}
+                >
+                <source src={BgVid4} type='video/mp4' />
+            </video>
         <div className="my-5">
 
             <form action='submit' id='member-form' onSubmit={handleSubmit}>
@@ -146,13 +161,12 @@ const AddMember = () => {
                         }}
                         placeholder="html,css,javascript,react"
                         required/>
-                </div>
 
-            <button className="btn btn-primary">Save</button>
+            <button type="submit" className="btn btn-primary">Save</button>
             </form>
+        </div>
 
         </div>
     );
 }
-
 export default AddMember;

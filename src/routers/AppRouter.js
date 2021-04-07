@@ -4,7 +4,6 @@ import Members from '../pages/Members'
 import Member from '../pages/Member'
 import AddMember from '../pages/AddMember'
 import Navbar from '../components/Navbar'
-
 const AppRouter = () => {
     return (
         <div>
@@ -23,5 +22,4 @@ const AppRouter = () => {
         </div>
     );
 }
-
 export default AppRouter;
