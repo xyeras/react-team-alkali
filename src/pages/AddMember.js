@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 
 const AddMember = () => {
@@ -16,14 +16,15 @@ const AddMember = () => {
         languages: [],
     });
 
-    const saveMember = () => {
+    useEffect(() => {
+        console.log(members);
+    })
 
-        // debugger;
+    const saveMember = () => {
 
         member.id = Date.now();
         setMembers([...members, member]);
         console.log('Submit works!');
-        console.log(members);
         console.log('Tacos!');
 
     }
