@@ -21,6 +21,18 @@ const AddMember = () => {
         member.id = Date.now();
         membersData.push(member);
         setMembers(membersData);
+
+        setMember({
+            firstName: '',
+            lastName: '',
+            featured: false,
+            email: '',
+            linkedIn: '',
+            github: '',
+            bio: '',
+            profile_img: '',
+            languages: []
+        })
     }
     
     const handleSubmit = event => {

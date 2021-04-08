@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { membersData } from '../data/membersData';
 import { useParams } from 'react-router-dom';
-
+import MemberList from '../components/MemberList';
 import { Link } from 'react-router-dom';
-import  MemberCard  from '../components/MemberCard';
 import '../App.css';
 
 const Member = () => {
@@ -58,18 +57,17 @@ const Member = () => {
                                             </div>
                                         
                                         <div className='th-card-detail  mt-3'>
-                                        <div className='info d-flex'>
+                                        <div className='info'>
                                             <h4 className='text-danger text-center'>Connect Here:</h4>
                                             
                                             <p className={`url(${member.email})`}>
-                                                <a herf ='javascript:void(0)' className='card-link' onClick ={() => updatedFeatured(member.id)}>
                                                 <span className='badge'>
-                                               <p>{member.email}</p>
-                                              <p>{member.github}</p>
-                                               <p>{member.linkedIn}</p>
+                                                    <p>{member.email}</p>
+                                                    <p>{member.github}</p>
+                                                    <p>{member.linkedIn}</p>
                                                 </span>
-                                                </a>
                                             </p>
+
                                            </div>
                                             <h4 className='text-center text-danger mt-3'>Languages
                                             <p className='text-center'>
@@ -88,9 +86,7 @@ const Member = () => {
                                                 <div className="container text-center mt-5">
                                                 <Link to={`/members`}>View Details
                                                 </Link>
-                                                <a href='javascript:void(0)' className='card-link'>
-                            
-                                                </a>
+                        
                                             </div>
                                         </div>
                                     </div>
@@ -104,14 +100,7 @@ const Member = () => {
                     </p>
                     
                     <div className="col text-center">
-                        {membersData.map(member => {
-                            return (
-                            <div className="cards1" key={member.id}>
-                                <MemberCard member={member.id} updatedFeatured={updatedFeatured}/>
-                            </div>
-                            
-                            )
-                        })}
+                        <MemberList member={member.id} updatedFeatured={updatedFeatured}/>
             
                     </div>
                 </div>

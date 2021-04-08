@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
 .info {
   font-size: 12px;
 }
@@ -13,12 +12,11 @@
 
 p {
   font-family: 'Orbitron';
-  color: rgb(35, 77, 114);
+  color: rgb(128, 159, 186);
   justify-content: center;
   align-items: center;
 }
-
-.subhead { 
+.subhead {
   font-family: 'Orbitron';
   top: 50%;
   left: 50%;
@@ -27,8 +25,9 @@ p {
   padding: 0 10px;
   font-size: 3em;
   color: white;
-  text-shadow: 0 0 20px #ff005b;
+  text-shadow: 0 0 20px #FF005B;
 }
+
 .subhead:after {
   content: attr(data-text);
   position: center;
@@ -37,7 +36,6 @@ p {
   padding: 0 10px;
   z-index: -1;
   color: rgb(9, 11, 11);
-
 }
 
 .subhead:before {
@@ -60,7 +58,6 @@ p {
   background-size: 100%;
   width: 400px;
   height: 132px;
-
 }
 
 .header1 {
@@ -80,7 +77,6 @@ p {
 body {
   padding: 0;
   margin: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,28 +84,29 @@ body {
 }
 
 h2 {
+  box-shadow: 20px 20px 50px rgba(208, 203, 203, 0.5);
+  background-color: rgba(69, 74, 71, 0.1); ;
+  font-family: 'Orbitron';
   margin: 10;
-  padding: 5px;
+  padding: 15px;
   justify-content: center;
-  align-items:flex-start;
-  font-size: 8px;
-  color: #e9ebf0;
 }
 
-.h7{
+.h7 {
   margin: 10;
   padding: 5px;
   justify-content: center;
   align-items:flex-start;
   font-size: 8px;
-  color: #e9ebf0;
+  color: #E9EBF0;
 }
 
 h6 {
+  display:grid;
   font-family: 'Orbitron';
-  font-size: 10px;
-  justify-content: center;
-  color: #1f3367;
+  font-size: 8px;
+  /* justify-content: center; */
+  color: #CFD3DE;
 }
 
 .navbar .nav {
@@ -119,10 +116,9 @@ h6 {
 
 .navbar .nav .navbar-expand  {
   justify-content: center;
-  color: #7887a4;
+  color: #7887A4;
   font-size: 25px;
 }
-
 .card-header {
   color: aliceblue;
   display: grid;
@@ -132,9 +128,7 @@ h6 {
 }
 
 .th-card-bg-img {
-  background: rgba(198, 185, 185, 0.1);
-
-  width: 100%;  
+  width: 100%;
   height: 100px;
   background-repeat: no-repeat;
   background-position:top;
@@ -157,7 +151,6 @@ h6 {
   backdrop-filter: blur(5px);
 }
 
-
 strong {
   text-align: center;
   margin: 6;
@@ -173,10 +166,11 @@ strong {
     display: flex;
     text-align: center;
     margin: 16px;
+    font-size: 26px;
     position: relative;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
-    color: rgb(224, 63, 26);
+    color: rgb(201, 101, 79);
 }
 
 form {
@@ -184,10 +178,10 @@ form {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   font-size: 15px;
-  color: #8e96a5;
+  color: #8E96A5;
 }
 
-.th-card {
+.th-card{
   width: 20px;
   display: flex;
   background-size: cover;
@@ -196,7 +190,6 @@ form {
   height: 50%;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-
 }
 
 .th-card-detail {
@@ -207,7 +200,6 @@ form {
   flex-wrap: wrap;
   z-index: 1;
 }
-
 
 .th-card-bg-img {
   display: grid;
@@ -225,55 +217,31 @@ span {
   color: rgb(31, 80, 109);
 }
 
-.bg2{ 
-  background: rgba(255, 255, 255, 0.1);
-  width: 210px;  
-  height: 210px;
-  background-size: contain;
+.bg2 {
+  display: flex;
+  background: rgba(21, 19, 19, 0.1);
+  width: 210px;
+  height: 350px;
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position:top;
 }
-.card-body2{
-  
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+.card-body2 {
+  display: grid;
+  width: 530px;
+  height: 1100px;
+  box-shadow: 20px 20px 50px rgba(232, 228, 228, 0.5);
   border-radius: 35px;
-  background: rgba(133, 124, 124, 0.1);
+  background: rgba(2, 2, 2, 0.1);
+  overflow: hidden;
   justify-content: center;
   color: aliceblue;
-  align-items: center;
   border-top: 1 px solid rgba(255, 255, 255, 0.5);
   border-left: 1 px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
 }
 
-.subcomponent {
+img {
   display: flex;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.th-card-bg-img {
-  height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.th-member-img {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.th-card-header {
-  color: #282c34;
-  font-size: 1.5em;
-  border-bottom: 1px solid #999;
-}
-
-.th-card-name {
-  color: #282c34;
+  width: 34px;
+  height: 0 30px;
 }
