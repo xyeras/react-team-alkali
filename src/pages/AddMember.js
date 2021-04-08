@@ -16,7 +16,6 @@ const AddMember = () => {
         profile_img: '',
         languages: [],
     });
-
     const saveMember = () => {
         member.id = Date.now();
         membersData.push(member);
@@ -39,7 +38,9 @@ const AddMember = () => {
         event.preventDefault();
         saveMember();
     };
+
     return (
+        
         <div className='body mt-5'>
             <video autoPlay loop muted
                 style={{
@@ -70,6 +71,7 @@ const AddMember = () => {
                         onChange={event => {
                             setMember({...member, firstName: event.target.value});
                         }}
+                        placeholder=''
                         required/>
                     </div>
                     <div className="form-group col-md-6">
@@ -82,6 +84,7 @@ const AddMember = () => {
                         onChange={event => {
                             setMember({...member, lastName: event.target.value});
                         }}
+                        placeholder=''
                         required/>
                     </div>
                 </div>
@@ -124,6 +127,7 @@ const AddMember = () => {
                         onChange={event => {
                             setMember({...member, github: event.target.value });
                         }}
+                        placeholder=''
                         required/>
                 </div>
 
@@ -150,6 +154,7 @@ const AddMember = () => {
                         onChange={event => {
                             setMember({...member, profile_img: event.target.value });
                         }}
+                        placeholder=''
                         required/>
                 </div>
 

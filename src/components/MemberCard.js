@@ -10,22 +10,21 @@ const MemberCard = ( {member} ) => {
 
            <div className='body text-center'>
              <h4 className='card-title'>
-                 {member.firstName}  {member.lastName}
+                {member.firstName}  {member.lastName}
              </h4>
-
-             
                 <h6 className='info'>
-                    <strong>Bio: 
-                        </strong>  {member.bio}
+                <strong>Bio: 
+                </strong>  
+                {member.bio}
                 </h6>
                 
                 <h6>
-                    <strong>Email: </strong>{member.email}
+                    <strong>Email: </strong>
+                    <p>{member.email}</p>
                 </h6>
 
-                    <div className='my-2'>
-                        <strong> Languages: </strong>
-
+                    <div className='col my-2'>
+                    <strong> Languages: </strong>
                         {member.languages?.map((language, i) => {
                             return <small key={i}> {language}{i === member.languages.length - 1 ? '' : ', ' } </small>
                         })}
