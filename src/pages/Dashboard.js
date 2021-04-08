@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     return (
 
-        <div className='body mt-5 text-center'>
+        <div className='container mt-5 text-center'>
             <video autoPlay loop muted
                 style={{
                     position: 'fixed',
@@ -42,20 +42,19 @@ const Dashboard = () => {
             <p>About our Team:</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus officiis ad consequuntur natus soluta voluptates consectetur fuga inventore voluptatibus assumenda.</p>
             <div className='row text-center'>
-        </div>
-        <div className='container text-center'>        
+            </div>
+              
         <div className='card-header text-center'>
-        <h1 className='col-md-6 subhead'data-text="This Week's Featured Member:"></h1>
+        <h1 className='col-sm-12 subhead'data-text="This Week's Featured Member:"></h1>
             {members.map((member, index) => {
                 return (
-                    <div className='row justify-content-center' key={member.id}>
+                    <div className='th-card justify-content-center' key={member.id}>
                     <MemberCard member={member} updatedFeatured={updatedFeatured} />
                     </div>  
                 );
             })}
             </div>
 
-        </div>
         </div>
     );
 };
