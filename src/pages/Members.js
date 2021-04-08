@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { membersData } from '../data/membersData';
 import MemberCard from '../components/MemberCard';
-
 import BgVid3 from '../video/bgvid3.mp4';
 import '../App.css';
 
